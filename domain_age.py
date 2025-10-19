@@ -2,7 +2,6 @@ import whois
 import sys
 from datetime import datetime
 
-url = sys.argv[1]
 def dom_age(url):
     try:
         name = url.split('//')[-1].split('/')[0]
@@ -19,4 +18,3 @@ def dom_age(url):
             return 'could not find creation date'
     except TimeoutError:
         return 'timeout'
-print(dom_age(url))
