@@ -7,8 +7,6 @@ def virus_total(url):
     VT_ANALYSES = "https://www.virustotal.com/api/v3/analyses/{}"
     with open("C:\\Engineering\\ApiKey.txt","r") as f:
         API_KEY=f.read().strip()         
-    '''if not API_KEY:
-           raise RuntimeError("VT_API_KEY not set")'''
     HEADERS = {"x-apikey": API_KEY} if API_KEY else {}
 
     def submit_url(url):
@@ -72,3 +70,4 @@ def virus_total(url):
         return parse_report(analy)
     return check_url(url)
     
+
